@@ -9,3 +9,4 @@ var app = express()
 
 //we will have to install serve_static package using the command
 //npm install serve-static --save
+//use is used to plug-in middleware functions 

@@ -1,3 +1,86 @@
+27/June/2024-Thursday
+.....................
+Assignment:
+/ will server login.html 
+/ POST we will process the login form 
+/register GET then we will server register.html
+/register POST we will process the register form
+for now we will maintain our user records in an array 
+
+MVC-Model, View, Controller all split into separate files 
+route and controller are different 
+The function that processes the url/route become the controller itself!!
+
+mvc_split1
+
+
+Path-core module
+__proto__
+
+express_demos2>npm init 
+npm install express --save
+npm install serve-static --save
+npm install body-parser --save
+
+
+ExpressJS Continued
+middleware
+being able to process a specific http method for each request url
+/login GET or POST 
+/register GET or POST 
+.use() will be used to plug-in other middle ware functionality
+-route splitting into a separate, login, authenticate
+express-VERB FUNCTIONS-get(),post(),put()
+we want to serve static html pages 
+then, how to send back dynamically created html pages-HTML String Template Literal 
+sendRedirection()
+request dispatching-control passing from one controller to another
+Templating Engines-EJS, PUG (Jade), Handlebars 
+how to read form data
+how to read query parameters
+how to read REST params
+split our routing instructions into a separate file 
+your starting point in the node application can be a file that is conventionally called
+app.js, server.js, index.js 
+public>index.html src node_modules 
+
+we will keep our app.js/server.js/index.js outside public folder 
+why? becuase anything you put in public folder is automically accesible by end user
+we will not keep any script files in public folder
+typically we only keep index.html in that file, this file is the home page 
+index.html - Home Page 
+
+
+
+
+
+
+starting e-commerce application 
+
+
+Node will scan for node_modules folder
+
+node_modules contains all the dependencies physically installed
+
+parent>child>inner 
+
+parent>child>inner>a.js 
+
+assume that a.js is physically present in inner folder 
+let connect=require('connect');
+node a.js 
+
+before that, it will look for a folder called node_modules in inner folder
+first the system will look for connect installation in inner's node_modules folder 
+
+it will look for a folder called node_modules in the current folder
+if no such folder is found, then it will go check the parent folder-child (folder)
+if no such folder is found in child (folder), then it will go check child's parent folder
+which in this case happens to be parent (folder)
+This scanning will continue, until a node_modules folder 
+with the necessary package installation in found in the hierarchy
+
+
 26/June/2024-Wednesday
 ......................
 
