@@ -1,0 +1,11 @@
+{
+  "name": "app-v1",
+  "version": "1.0.0",
+  "description": "This is the first demo project ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kavita Seshadri",
+  "license": "ISC"
+}

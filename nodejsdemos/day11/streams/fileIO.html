@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fileIO</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
+    <script>
+        //I have an array of object literals, and I want to store this in a file as JSON
+        //we will declare an array of object literals
+        //we will convert it to JSON
+        //then we will write to it a file
+        let student = {
+            name: 'Cat',
+            age: 21,
+            percentage: 77.1,
+            single: true
+        }
+        let studentArray = [
+            {
+                name: 'Cat',
+                age: 21,
+                percentage: 77.1,
+                single: true
+            }, {
+                name: 'Bat',
+                age: 25,
+                percentage: 66.7,
+                single: false
+            },
+            {
+                name: 'Sat',
+                age: 27,
+                percentage: 80,
+                single: true
+            },
+        ];
+        //converting JavaScript Object to JSON String
+        //Convert Object Literal to JSON String
+        let jsonString = JSON.stringify(student);
+        console.log(student);
+        console.log(jsonString);
+        //JSON String back to JavaScript object
+        let s2 = JSON.parse(jsonString);
+        console.log(s2);
+        function saveToFile() {
+            const file = new Blob(['Hello, World'], { type: 'text/plain;charset=utf-8' })
+            saveAs(file, 'hello_world.txt');
+            const file2 = new Blob([jsonString], { type: 'application/json' });
+            saveAs(file2, 'student_data.txt');
+            const file3 = new Blob([JSON.stringify(studentArray)], { type: 'application/json' })
+            saveAs(file3, 'student_array_data.txt');
+        }
+
+        let obj = "";
+        let fileData = "";
+        function handleFileSelect() {
+            console.log('handle file select called');
+            const reader = new FileReader();
+            reader.onload = getFromFile;
+            //wiring the event, but it will be called after line 67
+            console.log('onto line number 66');
+            reader.readAsText(event.target.files[0]);
+        }
+
+        function getFromFile() {
+            console.log('reading the file data');
+            fileData = event.target.result;
+            console.log('file data');
+            console.log(fileData);
+            obj = JSON.parse(fileData);
+            console.log(obj);
+        }
+        function setUp() {
+
+        }
+    </script>
+</head>
+
+<body onload="setUp()">
+    <h1>Check Console</h1>
+    <button onclick="saveToFile()">Save To File</button>
+    <input file="file" id="initialFile" onchange="handleFileSelect()" />
+    <button onclick="getFromFile()">Get From File</button>
+</body>
+
+</html>

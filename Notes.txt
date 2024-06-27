@@ -1,0 +1,651 @@
+26/June/2024-Wednesday
+......................
+
+limitations of http module
+
+var server = http.createServer((req,res)=>{
+
+})
+
+if I'm using http to build my web-application, I will have to determine and manage every last detail associated with the Request
+I will have to determine very http method&url combination and then take an action accordingly
+request object contains all the information received from the browser(client)
+url
+http method
+form parameters
+headers-metdata about the browser itself!
+
+GET-when you type any url in the address bar of the browser, also any hyperlink, and any form submitted using method as GET-
+all these requests will be sent as a GET request
+
+POST-form method="POST"
+
+installing external modules 
+
+npm install connect --save
+
+a folder called as node_modules is created in the pwd
+and this dependency is installed in that folder, also listed in package.jsons
+
+for any node project-
+first create a directory
+switch to that directory
+then run npm init (go with defaults, unless you want to change something)
+you can go with the default by pressing enter
+then confirm, this process creates a package.json
+after that start your installation-
+npm install connect --save
+after the package.json is created, we can do the installtion, as a result
+ two things will happen-
+ node_modules folder will be created
+ the dependency will be listed in package.json
+
+
+npm install express --save
+
+The people who created express are connect are the same
+Express has been built on top of connect
+
+For package scanning, there is a very useful system followed by node
+
+
+connect
+express
+
+25/June/2024-Tuesday
+....................
+CommonJS Module System
+
+core modules in node.js-path, event, streams, http
+I don't need to install a core module, it's already
+available in the platform
+
+External Module-connect, connect
+These need to be installed before usage
+when you install them using npm command,
+this dependency will be saved in package.json
+
+
+events
+streams-I/O
+http-if a web server had to built from scratch? 
+
+From connect, express onwards, we will have to start installing external modules
+connect
+express
+
+1) Web Application Dev using Node+Express 
+2) UI-BL, Persistence Layer, MVC- ES6 String Templates, Templating Engine-EJS/PUG/Handlebars
+3) RESTAPIs 
+4) Routing, Authentication, Persistence-MongoDB+Mongoose, POSTGRES..
+
+
+
+24/June/2024-Monday
+...................
+
+how to create a new project
+
+npm init 
+
+NodeJS follows the CommonJS module specification. 
+Kevin Dongaoor created CommonJS in 2009
+
+AMD-when you want to move your backend JS code to frontend
+
+ES Module System-ReactJS, NextJS
+
+Package and Deploy JS applications
+
+
+Module System-CommonJS
+events, files, streams, buffer, http 
+
+Packages/modules-NodeJS Ecosystem
+path, fs, event, http
+
+web server from scratch using http module 
+express-framework that has been built on top of http 
+
+Modules/Module System
+......................
+
+To make code more manageable and re-usable
+Each file is it's own module-a.js,b.js,c.js 
+and, by default, you don't have access to anything declared in other modules
+unless the other module decides to export it
+
+export/import
+to export something from a module we will make use of
+module.exports 
+
+To import a module, use the globally available 
+require function
+
+if something has to be made accessible outside a file/module, you will have to export it
+if you want to use something from another file, then you've to import it
+
+when I create a module, that is basically an .js file in node,
+I can export one or multiple things from the file.
+
+and, then, when I'm importing something from the module, I can't import it using any name
+names do not matter in nodejs!
+
+There are three kinds of modules in Node.js: 
+core modules-path, event,stream, http, fs 
+file modules-what we are doing right now
+and 
+external node_modules-we will be installing these using npm commmand
+
+
+all of which use the require function.
+
+in all the examples so far, one module is being imported by several different modules
+every time a module is imported, is the system going to create a new copy that variable?
+or will it make all modules share the  same copy? 
+thereby preventing the pollution of global namespace?
+
+How to Create a Node Project-
+
+npm init
+this command will create a file called as package.json
+which contains all the metadata for a node.js project
+all dependencies
+starting script
+
+node_modules 
+this folder will show up or get created, only once we install 3rd party modules-express, session
+package.json is a simple json file
+
+21/June/2024-Friday
+...................
+
+refactoring moveX using await
+parallel vs sequential await 
+
+NodeJS commands
+executing JavaScript in node shell
+
+difference between executing JS in a browser vs node shell
+Module CommonJS Module system
+
+can I run html files in NodeJS?
+browser-v8 engine 
+nodejs-v8 engine, another part-is requiered to do all the file handling, event handling, core modules of node
+
+node_modules
+package installation, package.json
+
+window-browser 
+global-nodejs shell-anything related to DOM or window will not work in nodejs
+
+DOS commands 
+shell commands-mac, linux 
+
+to view all files or folder in you prompt-dir 
+mac-ls 
+
+run cmd 
+launch cmd 
+
+c: (enter)
+d: (enter)
+
+c:>cd foldername
+c:\foldername>cd.. 
+cd ..
+
+cd: change directory
+
+.. represent parent directory
+
+use tab to call out names quickly
+
+pwd: present/print working directory
+
+cd (change directory)
+
+cd foldername
+
+c:\nodejsdemos 
+d:\nodejsdemos 
+
+
+
+
+file, event, http packages
+Express-MVC applications in NodeJS
+Templating Engines-EJS
+Routing
+mongodb, mongoose, postgres -sequelize, prismaorm 
+RESTful API
+Authentication
+Web Sockets
+
+
+I can't run html files in node shell
+
+you need two installations on your computer-
+nodejs installed
+nvm (node version manager)
+nvm-will allow you to have multiple versions on nodejs to exist on your computer
+
+some node shell commands
+node --version
+node --help
+nvm 
+nvm --version
+nvm ls 
+
+cls()-windows
+mac-clear 
+
+nvm use 18.20.3
+node --version
+nvm use 22.2.0 
+node --version
+
+node test1.js
+all outputs from console.log() will be printed on the shell or cmd prompt
+
+typing node will make you enter the node shell
+
+to exit you will have to type ctrl C twice
+
+
+
+
+20/June/2024-Thursday
+.....................
+
+fix yesterday's moveX bug
+
+when JS is being imported from an external .js file, the location of the import is very important
+ <script src="app.js"></script>
+
+ We will discuss how to import external js files in an html page,
+ and will be the visiblity of these files etc.
+
+NodeJS-module system, 
+files and events-async 
+XHR XML Http Request-primitive (underlying fundamental browser object that is doing all the work for you in the background when you use fetch or axios)
+
+fetch API-Old Internet Explorer
+axios API-it's a better looking cleaner version of fetch
+
+any external RESTAPI you will be using fetch and axios
+fetch and axios also return Promises 
+then(),catch()
+async and await
+
+jsonplaceholder api-
+
+users
+posts
+comments
+
+NodeJS-DB, EJS Template, RESTFUL API, mongodb,mongoose,postgres, express+http
+HTTP Methods: GET,POST,DELETE, PUT, OPTIONS etc
+HTTP Request-Response cycle: takes place between the browser and the web-app server
+
+I don't need to import anything to use fetch API- becuase it is the browser's native API
+
+async is a substitute for not using new Promise and resolve and reject in your api implementation
+await is a substitute for not using then() and catch() in your api calling
+
+
+
+
+
+
+async
+await
+
+code organization in client side javascript-
+1) HTML, <script></script>
+you can include the script tag as many times as you want in the html page
+2) HTML, app.js (app.txt)
+
+
+
+19/Jun/2024-Wednesday
+.....................
+
+Promises-
+A Promise is an object representing the eventual completion or failure of an Aysnchronous task
+a long running operation-whether it will succeed or whether it will fail
+a long running-DB, File, Network 
+
+Promise-a pattern for writing asynchronous code
+setTimeout()-all aysnc, it will be removed from the main flow of the application
+in the meantime, you call stack will execute
+
+when you create a promise, it doesn't contain anything concrete, it doesn't have any results for you
+that is why, you have a to wait.
+if you try to obtain anything from a promise, until it has resolved into something successful or into a  failure
+
+Until it has resolved or rejected, in the meantime what you get is a promise.
+
+we need to the promise object two things-
+two functions-
+
+a function/callback that will be called if the promise is resolved
+a function/callback that will be called if the promise is rejected
+
+what/how should the promise notify you if it is successful or if it fails
+
+Promise object gives us two functions
+then()
+catch()
+
+we are passing the success callback to then() function
+we passing the failure callback to the catch() function
+
+
+willgetyouadog is a reference that is pointing to a Promise object!
+
+we have seen, how to pass a success and failure callback to our promise
+now, let's how the promise will pass us back some data!!
+
+
+async and await keywords-these are called as syntactical sugar for the Promise
+
+
+
+
+
+
+
+18/Jun/2024-Tuesday
+....................
+
+Aysnchronous JavaScript:
+Callstack 
+JS is Single Threaded
+difference between synchronous and asynchronous
+
+Animations,File, Network, DB Operations->success, failure, exception-delay
+waiting, or hanging or not allowing it to do anything else,
+ simply because we are waiting for some response from the DB server
+
+
+How Aysnc Callback Actually Works
+
+setTimout()
+setInterval()
+
+
+Callback Nesting and Callback Hell
+
+I'm  calling a function-
+that function has to do some job/task
+it has to fetch something from somewhere-file,network, DB
+do some Animation
+
+now, this caller in JS will always ask for 2 callback
+success callback
+failure callback
+
+this JS function will let us know that it has succeeded by calling our success callback
+this JS function will let us know that it has failed by calling our failure callback
+
+
+
+
+Callback nesting or Promises
+OOP
+
+Promisises, Async,Await
+
+
+
+Http, DB, RESTAPI, 
+DOM, Events, BOM-we will be coming to this
+
+14/June/2024-Friday
+...................
+
+Today-
+map, reduce, filter
+functional constructors-OOP representation
+class, extends, static, public, protected etc-syntactical sugar 
+Prototype based inheritance
+alert(),prompt()-CUI
+Object Literal
+Student
+Box-length, width, height, color, material accept(),display(), volume()
+ObjectLiteral
+function constructor
+ask the end user how many objects he wants to create
+
+this, closure 
+
+GUI-DOM, async-ReactJS
+
+
+13/June/2024-Thursday
+......................
+
+Today-
+ES6 features required for ReactJS-
+array-spread, rest , destructuring 
+
+
+later we will be discussing about-data types, operators, equality check
+using ==, ===
+
+let callback=function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+}
+
+$(document).ready(callback);
+
+
+12/June/2024-Wednesday
+......................
+
+Yesterday-
+function syntax
+higher order function, functions are first class citizens in JS
+IEF-Immediately Executing functions
+Anonymous Functions
+started Callbacks
+nested functions
+closures
+started object literal
+started array declaration
+started setTimeout()
+
+Today-
+adding methods to Object literal
+-this is going to make it's first appearance
+arrow functions-ES6 feature
+Array functions-map,reduce,filter, push, pop, unshift
+ES6 features required for ReactJS-
+spread, rest , destructuring 
+
+11/June/2024-Tuesday
+...................
+
+Yesterday-
+var, let, const
+var-supported redeclaration
+let,const-do not support re-declaration
+started with scope a little bit
+if,else,loops do not create a new scope for variable
+
+started defining functions
+arrow function
+callbacks-WHAT, WHY? 
+WHAT-what is possible syntactically
+WHY?-why do we need this?
+NodeJS-callback
+ReactJS Library-class, v16.x functional 
+
+nested functions
+closure
+ES6 features-ReactJS
+OOP functional style
+class, extends, static, public, private
+OOP functions
+
+IEF-Immediately Executing function
+You can execute a function immediately after you define it.
+We simple wrapt the function in parantheses()
+
+
+callback-
+In JS functions are called as first class citizens
+In JS you can pass a function 
+-as an argument to another function.
+OOP Java-objects are the first class citizens
+
+map, reduce, filter-
+setTimout(),setInternal()
+http(), calling RESTAPI
+
+Object literal
+we try to avoid traditional classes and object instantiation where not required.
+
+Object Literal is not a substitute for the  class construct!
+class-bluprint
+Object Literal is an object itself!
+
+Prototype
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10-June-2024-Monday
+...................
+
+Presentation-
+Structure-html
+Styling-css
+Action/Interaction-JavaScript
+JavaScript-ES6
+
+Top 10 things to get started with
+
+var,let,const,scope
+a little about data types and operators
+array syntax
+object literal
+function syntax
+special function syntax-
+functions are first class citizens in JavaScript
+higher order functions
+callbacks, callback nesting
+
+nested functions
+closure
+function constructors
+arrow functions
+OOPs Constructs in JavaScript
+
+client-javascript
+server -javascript
+
+Logistics-
+
+1) html page,inline javascript <script></script>
+2) html page,external javascript file .js, imported into html
+3) nodejs-shell, .js you may also directly write your code into the
+node shell
+
+
+install nodejs
+browser-console
+using nodejs-nodejs, reactjs,nextjs
+html page, 
+
+
+
+
+Chrome-v8 Engine run your Javascript
+
+
+html,css-browser
+javascript-v8 engine
+
+v8
+components-
+
+nodejs-execution environment for javascript to run in the backend
+
+
+
+1) JavaScript-variables are declared without any type
+2) you can assign a value of any data type to java script variable
+
+CUI-
+GUI-BOM, DOM
+Browser Object Model-document, window
+Document Object Model-
+
+
+
+
+
+
+
+
+
+
+
+
+
+ECMA Script
+
+w3c-
+
+ES-6-2015-ReactJS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,220 @@
+<!-- 
+    ES6 Major Milestone in the evolution of JavaScript
+    //shortcuts, super duper
+    C,C++,Java 
+    main idea is to stop using a regular for loop
+    array-map,filter, reduce
+    //array, object 
+    destructuring
+    spread operator
+    rest operator
+    arrow functions
+    string template literals
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6_features2</title>
+    <script>
+        //array destructuring
+        const vehicles = ['mustang', 'f-150', 'expedition'];
+        //old way of accessing array elements
+        const car = vehicles[0];
+        const truck = vehicles[1];
+        const suv = vehicles[2];
+        console.log('car ' + car + ' truck ' + truck + ' suv ' + suv);
+        //array destructuring
+        const [car2, truck2, suv2] = vehicles;
+        console.log('car2 ' + car2 + ' truck2 ' + truck2 + ' suv2 ' + suv2);
+
+        const [car3, , suv3] = vehicles;
+        console.log('car2 ' + car3 + ' suv3 ' + suv3);
+
+        let fruits = ['Apple', 'Banana', 'Watermelon', 'Kiwi', 'Dragon Fruits'];
+        const [, , , , f0] = fruits;
+        console.log('f0 ' + f0);
+
+        const [f1, , f3, , f5] = fruits;
+        console.log('f1 ' + f1 + ' f3 ' + f3 + ' f5 ' + f5);
+
+        function getFruits() {
+            return fruits;
+        }
+
+        const [fa, , , fb, fc] = getFruits();
+
+        console.log('fa ' + fa + ' fb ' + fb + ' fc ' + fc);
+
+        function selectedNo() {
+            return [100, 200, 300];
+        }
+        const [n1, , n3] = selectedNo();
+        console.log('n1 ' + n1 + ' n3 ' + n3);
+
+        function getSomething2() {
+            let a = 5;
+            function squared(number) {
+                return number * number;
+            }
+            let message = "This is a very special function";
+            return {
+                data: a,
+                method1: squared,
+                info: message
+            }
+        }
+        function getSomething3() {
+            let a = 5;
+            function squared(number) {
+                return number * number;
+            }
+            let message = "This is a very special function";
+            //ES6 shortcut
+            return {
+                // a: a,
+                // squared: squared,
+                // message: message,
+                a,
+                squared,
+                message,
+            }
+        }
+        function getSomething1() {
+            let a = 5;
+            function squared(number) {
+                return number * number;
+            }
+            let message = "This is a very special function";
+            return [message, squared];
+        }
+
+        const [message, newFunction] = getSomething1();
+        console.log(message);
+        console.log(newFunction(2));
+        const [a, kuchbhi] = getSomething1();
+        console.log(a);
+        console.log(kuchbhi(2));
+
+        //object destructuring
+        const vehicleOne = {
+            brand: 'Ford',
+            model: 'Mustang',
+            type: 'car',
+            year: 2021,
+            color: 'red'
+        }
+        //old way of accessing properties of an object
+        function printVehicleDetails(vehicle) {
+            console.log(' brand ' + vehicle.brand);
+            console.log(' model ' + vehicle.model);
+            console.log(' type ' + vehicle.type);
+            console.log(' year ' + vehicle.year);
+            console.log(' color ' + vehicle.color);
+        }
+        printVehicleDetails(vehicleOne);
+        const printVehicleData = (vehicle) => {
+            console.log(' brand ' + vehicle.brand);
+            console.log(' model ' + vehicle.model);
+            console.log(' type ' + vehicle.type);
+            console.log(' year ' + vehicle.year);
+            console.log(' color ' + vehicle.color);
+        }
+        printVehicleData(vehicleOne);
+
+        //new way of accessing properties of an object using destructuring
+        const { model, color } = vehicleOne;
+        console.log(' model ' + model);
+        console.log(' color ' + color);
+
+        const printVehicleData2 = ({ color, brand }) => {
+            console.log(' brand ' + brand);
+            console.log(' color ' + color);
+        }
+        printVehicleData2(vehicleOne);
+        //spread operator ...
+        //copy and paste, merge
+        //spread operators with arrays
+        const numbersOne = [1, 2, 3];
+        const numbersTwo = [4, 5, 6];
+        const numbersCombined = [...numbersOne, ...numbersTwo];
+        //we are copying and pasting the contents of two arrays into one
+        console.log(numbersOne);
+        console.log(numbersTwo);
+        console.log(numbersCombined);
+        const numbersCombined2 = [...numbersCombined, 100];
+        console.log(numbersCombined2);
+        const numbersCombined3 = [22, 33, 44, ...numbersCombined, 500];
+        console.log(numbersCombined3);
+        const numbersCombined4 = [...numbersOne, 450, ...numbersTwo];
+        console.log(numbersCombined4);
+        //spread operators with objects
+        const myVehicle = {
+            brand: 'Ford',
+            model: 'Mustang',
+            color: 'red'
+        }
+        const updatedVehicle = {
+            type: 'car',
+            year: 2021,
+            color: 'yellow'
+        }
+        const myMergedVehicle = { ...myVehicle, ...updatedVehicle };
+        console.log(myVehicle);
+        console.log(updatedVehicle);
+        console.log(myMergedVehicle);
+
+        let student = {
+            name: 'Pappu',
+            division: 'Fail :('
+        }
+        console.log(student);
+        let stuObj = { ...student, division: 'Pass ho gaya' };
+        console.log(stuObj);
+
+        //overwriting and updation
+        student = { ...student, division: 'Pass ho gaya', name: 'John Doe' };
+        console.log(student);
+        student.name = "Shaktiman";
+        //rest operator ...
+        //variable number of arguments
+        let tempFunc = (n1, n2, ...capture) => {
+            //we will implement this using forEach later
+            console.log('tempFunc');
+        }
+        tempFunc(11, 22, 1, 2, 3, 4, 5, 6, 7, 8);
+        tempFunc(100, 200, 1, 2);
+
+        const numbers = [10, 11, 12, 14, 15];
+        tempFunc(500, 300, ...numbers);
+
+        let tempFunc2 = (...capture) => {
+            //we will implement this using forEach later
+            console.log('tempFunc2');
+        }
+        tempFunc2(11, 22, 1, 2, 3, 4, 5, 6, 7, 8);
+        tempFunc2(11, 22, 1);
+
+        //string template, literal
+        //arrow
+        //map,reduce,filter,forEach
+        //setTimeout-animation
+        //Callback Nesting->Callback Hell
+        //Promises
+        //Async-Await
+        //axios, fetch-we will be able to call REST API
+
+        let a1 = [1, 2, 3];
+        let b1 = a1;//reference copy
+        b1 = [...a1, 101];
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
