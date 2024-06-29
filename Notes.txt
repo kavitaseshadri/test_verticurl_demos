@@ -1,3 +1,38 @@
+28/June/2024-Friday
+...................
+
+routes splitting:
+
+We can make use of a anothe object present in the express framework-router 
+
+
+A minimum of two http methods need to be supported per url-
+/home GET, POST 
+
+We want to split our application into separate layers and put each layer in a different file/folder combination
+we don't want to write our entire application logic in single file like app.js or server.js
+controller 
+(it will contain the actual business logic or it will call the Business Layer, 
+the Business Layer in turn can call the Persistence Layer), 
+
+routes(mapping of url to the respective controller)
+model/persistence layer: will contain code to access the database-document/rdbms 
+
+so if my application logic does not reside in the same file, then the other files will have to be accessed through the module system
+
+view: will contain all the code to generate dynamic html either using HTML String Literal Template or other Template Engines like EJS, Handlerbars or PUG
+mvc_split1
+
+
+mvc_split2
+in this project we will create a controller folder, and copy admin.js and customer.js from the previous project into this folder
+then we create another new folder called routes-with two new files admin.js and customer.js, these files will only contain route optmization
+
+RESTFUL API 
+
+MVC or RESTful where the frontend would be some kind SPA application
+
+
 27/June/2024-Thursday
 .....................
 Assignment:
