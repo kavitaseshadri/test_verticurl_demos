@@ -28,7 +28,9 @@ var serveStatic = require('serve-static');
 //two more import will come here for routes import
 var customer = require('./routes/customer');
 var admin = require('./routes/admin');
-
+//customer and admin are file modules-are created by the programmers in application
+//core modules-no isntallation required
+//external modules-you need to install and use
 
 var app = express()
     .use(express.json())
@@ -39,7 +41,9 @@ var app = express()
     .get('/customer/login', (req, res, next) => {
         res.sendFile(__dirname + '/public/index.html');
     })
-    // .post('/customer/login', (req, res, next) => { })
+    // .post('/customer/login', (req, res, next) => {
+
+    //})
     // .get('/customer/register', (req, res, next) => { })
     // .post('/customer/register', (req, res, next) => { })
     // .get('/customer/browseProducts', (req, res, next) => { })
@@ -63,7 +67,6 @@ var app = express()
     .post('/customer/removeFromCart', customer.removeFromCart)
     .post('/customer/order', customer.order)
     .post('/customer/logout', customer.logout)
-
     .post('/admin/login', admin.login)
     .post('/admin/logout', admin.logout)
     .get('/admin/getProducts', admin.getProducts)
@@ -74,3 +77,14 @@ var app = express()
 app.listen(3500, () => {
     console.log('server is running on port 3500');
 })
+
+//MVC-Model, View, Controller
+//MVC Split1 The Router, Route<->Controller 
+//MVC Split2 The Router, Route, Controller , View, Model 
+//E-Commerce, Student App
+//E-Commerce-MongoDB using MongoDB, Mongoose, POSTGRES/MySQL-Sequelize, File Based 
+//Model-OOP, Functional 
+//View-HTML Templates, EJS, Handlebars, PUG Templating Engines
+//we want to keep the route definition and the logic of the controller de-coupled
+//if there is not de-coupling I will not be able to use my controller logic elsewhere
+

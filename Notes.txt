@@ -1,3 +1,16 @@
+1/July/2024-Monday
+..................
+
+req.params-this will allow us to access the param part of a RESTAPI call
+req.query-will be used to process query string
+req.body-is used to read form data
+reading json from our request will have json submitted 
+Views using HTML String Templates 
+Session Management-URL Rewriting, Hidden Form Field, Sessions and Cookies 
+Simple Cookies and Sessions 
+RESTAPI-such an application may or maynot have view and controller layers
+MVC-Persistence Logic is built and wrapped as RESTAPI only
+
 28/June/2024-Friday
 ...................
 

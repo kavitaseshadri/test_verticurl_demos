@@ -6,6 +6,7 @@ module.exports.login = (req, res, next) => {
     //authentication
     //authorization
     //session and cookie management
+    //JWT
     console.log('/customer/login called here');
     res.send('/customer/login called here');
     //access db layer or call a component that handles db layer
