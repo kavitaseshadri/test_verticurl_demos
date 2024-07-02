@@ -1,3 +1,21 @@
+2/July/2024-Tuesday
+...................
+
+Completed yesterday's Student RESTAPI implemented using arrays.
+
+Session Management-
+URL Rewriting, 
+Hidden Form Field, 
+Cookies
+Sessions
+JWT Session Token
+
+npm install express --save
+npm install body-parser --save
+npm install serve-static --save
+npm install cookie-parser --save
+npm install cookie-session --save
+
 1/July/2024-Monday
 ..................
 

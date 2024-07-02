@@ -75,21 +75,80 @@ var app = express()
         res.send(JSON.stringify(students));
     })
     .get('/students/:id', (req, res, next) => {
-
+        res.setHeader('Content-Type', 'application/json');
+        const id = req.params.id;
+        console.log('id ' + id);
+        let searchResult = students.filter((student) => {
+            return student.id === id;//when comparing primitives please use === and not ==
+        })
+        res.send(JSON.stringify(searchResult));
+        //here the student object is being converted into a json string
     })
+    .get('students/:name', (req, res, next) => { })//this will be igonored
     .get('/students/id/:id', (req, res, next) => {
-
+        res.setHeader('Content-Type', 'application/json');
+        const id = req.params.id;
+        console.log('id ' + id);
+        let searchResult = students.filter((student) => {
+            return student.id === id;//when comparing primitives please use === and not ==
+        })
+        res.send(JSON.stringify(searchResult));
+        //here the student object is being converted into a json string
     })
     .get('/students/name/:name', (req, res, next) => {
-
+        const name = req.params.name;
+        console.log('name ' + name);
+        let searchResult = students.filter((student) => {
+            return student.name === name;
+        })
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify(searchResult));
     })
     .post('/students', (req, res, next) => {
-
+        //adding a new record to the collection
+        console.log('processing student data json input');
+        const { id, name, salary } = req.body;
+        console.log(req.body);
+        students.push({
+            id,
+            name,
+            salary
+        })
+        console.log(students);
+        res.send(students);
     })
     .put('/students', (req, res, next) => {
-
+        //replacing an existing record with a new value
+        //this will be like your edit function in CRUD operations
+        console.log('processing student data json input');
+        const { id, name, salary } = req.body;
+        console.log(req.body);
+        const updatedArray = students.map((student, index) => {
+            if (student.id === id) {
+                student = {
+                    id,
+                    name,
+                    salary
+                }
+            }
+            return student;
+        })
+        students = [...updatedArray];
+        res.send(students);
     })
     .delete('/students/:id', (req, res, next) => {
+        const id = req.params.id;
+        console.log('id ' + id);
+        console.log(students);
+        let leftoverArray = students.filter((student) => {
+            return student.id !== id;
+        })
+        students = leftoverArray;
+        console.log(students);
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify(students));
+    })
+    .delete('/students/id/:id', (req, res, next) => {
 
     })
     .listen(3500, () => {
