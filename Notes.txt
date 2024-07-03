@@ -1,3 +1,128 @@
+3/July/2024-Wednesday
+.....................
+
+mongod shell-cui to interface with MongoDB
+mongosh shell-cui to interface with MongoDB
+MongoDB Compass-gui to interface with MongoDB 
+
+CRUD-
+Select Operations
+Operators 
+
+show dbs 
+
+To switch to a DB 
+
+use fruitsdb 
+fruitsdb>
+use ecommDB
+ecommDB> if I don't add a collection to this db, then it will not be saved
+
+it will not save empty things!
+
+show collections
+
+use command can be used for both creating as well as switching to an existing db 
+
+when I run insert command, it is creating both the collection and inserting the object for meaning
+
+use mixedDB
+    db.students.insertOne({name:'Cat',age:21});
+    db.students.find()
+    db.students.insertOne({name:'Mat',age:22});
+    db.students.insertMany([
+        {name:'Pat',age:27},
+        {name:'Sat',age:25},
+        {name:'Rat',age:24},
+    ])
+    show collections
+    db.students.insertOne({name:'Sat',age:25,hobbies:['Bowling','Swimming']});
+    db.students.insertOne({name:'Pat',age:25,addresses:['first lane','second lane']})
+    db.students.find()
+    db.students.find({age:{$lt:25}})
+    db.students.find({age:{$gt:25}})
+    db.students.find({name:'Sat'})
+    db.students.find({age:25})
+    db.students.countDocuments({ age: { $lte: 25 } })
+    db.students.updateOne({ age: 25 }, { $set: { age: 27 } })
+    db.students.updateMany({ age: 25 }, { $set: { age: 27 } })
+    db.students.deleteOne({name:'Sat'});
+    db.students.deleteMany({age:{$gte:27}});
+    db.students.updateOne({name:'Cat'},{$push:{hobbies:"Swimming","Bowling"}})
+    db.students.updateOne({name:'Sat'},{$push:{hobbies:"swimming"}})
+    db.students.deleteOne({name:'Sat'});
+    db.students.deleteOne({_id: ObjectId("65fab314b54e18a8fb855c42")})
+    db.students.insertOne({name:'Sat',age:25})
+    db.students.updateOne({name:'Sat'},{$push:{hobbies:"swimming"}})
+    db.students.updateOne({name:'Sat'}, { $pull: { hobbies: "swimming" } })
+    db.students.updateOne({name:'Sat'}, { $push: { hobbies: "bowling" } })
+    db.students.updateOne({name:'Sat'}, { $push: { hobbies: "swimming" } })
+
+
+
+ORM-Object Relational mapping
+ODM-Object Document mapping 
+
+MongoDB shell
+Using MongoDB Driver in our node application to connect to MongoDB
+Using Mongoose ODM to connect our node application to MongoDB-they made API flatter, Schema
+
+
+MongoDB-Document Database is the complete opposite of RDBMS 
+Schema-is the format in which I want to store my data 
+name of my table,
+how many columns,
+data types 
+
+JavaScript Object-it lets us think about things in terms of objects 
+JavaScript<->json
+
+Text File-then everything will be stored as text, data types will be lost and will require conversion, text files can read directly by human
+Binary File-then I can preserve the data type, you can't read it directly, it can only be read programatically
+text file is human readable
+binary file is machine readable 
+
+There is no table as such 
+Table=Collection (of objects)-hetrogenous collection of objects 
+Row=Document (is actually just one single object)
+There will be a single DB Instance and all our Tables will belong there 
+
+Here, we can create as many DBs we want 
+It's a light weight document based db 
+where everything is stored in a text file-BSON file which JSON+Binary Data Storage
+
+JavaScript Object can easily be stored in a MongoDB database without much effort.
+This  can be done both on the shell and programatically
+
+I can represent relations from the real world in a more meaning ful way using OOP
+
+const Person= {
+  let name='Cat',
+  let age=25,
+  const officeAddress= {
+
+  },
+   const homeAddress= {
+
+  }
+  const salary={
+    let hra='',
+    let basic='',
+    let specialBonus='',
+  }
+
+}
+
+npm install mongodb --save
+npm install mongoose --save
+
+insert.js
+
+use simpleDB
+db.movies.find()
+
+
+
 2/July/2024-Tuesday
 ...................
 
