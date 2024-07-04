@@ -1,3 +1,38 @@
+4/July/2024-Thursday
+.....................
+
+npm install mongoose --save
+npm install mongodb --save
+
+DB Code can be written in-
+OO-mongodb, mongoose 
+functional-mongodb, mongoose 
+
+Customer
+Product 
+Student 
+
+Roles-Admin, Customer 
+Admin-add,update,delete,view all products-products
+Customer-addToCart, removeFromCart, udpateCart, view all products
+
+View using HTML Template 
+View-Templating Engines Like Pug, Handlerbars, EJS 
+
+Classes in JavaScript using Class Keywords 
+this, apply, call, bind
+
+
+JWT 
+Authentication
+Validation
+
+e-commerce 
+smaller examples 
+
+
+
+
 3/July/2024-Wednesday
 .....................
 

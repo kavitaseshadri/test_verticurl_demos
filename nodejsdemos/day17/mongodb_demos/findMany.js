@@ -6,7 +6,8 @@ async function run() {
     try {
         const database = client.db("simpleDB");
         const foods = database.collection("foods");
-        const query = { healthy: false };
+        // const query = { healthy: false };
+        const query = { healthy: true };
         const foodArray = await foods.find(query).toArray();
         console.log(foodArray);
 
