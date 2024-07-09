@@ -57,37 +57,28 @@ var app = express()
         console.log(record);
         res.send(record);
     })
-    // .put('/students', (req, res, next) => {
-    //     //replacing an existing record with a new value
-    //     //this will be like your edit function in CRUD operations
-    //     console.log('processing student data json input');
-    //     const { id, name, salary } = req.body;
-    //     console.log(req.body);
-    //     const updatedArray = students.map((student, index) => {
-    //         if (student.id === id) {
-    //             student = {
-    //                 id,
-    //                 name,
-    //                 salary
-    //             }
-    //         }
-    //         return student;
-    //     })
-    //     students = [...updatedArray];
-    //     res.send(students);
-    // })
-    // .delete('/students/id:id', (req, res, next) => {
-    //     const id = req.params.id;
-    //     console.log('id ' + id);
-    //     console.log(students);
-    //     let leftoverArray = students.filter((student) => {
-    //         return student.id !== id;
-    //     })
-    //     students = leftoverArray;
-    //     console.log(students);
-    //     res.setHeader('Content-Type', 'application/json');
-    //     res.send(JSON.stringify(students));
-    // })
+    .put('/students', async (req, res, next) => {
+        //replacing an existing record with a new value
+        //this will be like your edit function in CRUD operations
+        console.log('processing student data json input');
+        const { id, name, age, marks } = req.body;
+        console.log(req.body);
+        let count = await student.updateStudent({
+            id,
+            name,
+            age,
+            marks,
+        })
+        res.send(`<h1>${count} record(s) updated</h1>`);
+    })
+    .delete('/students/id/:id', async (req, res, next) => {
+        const id = req.params.id;
+        console.log('id ' + id);
+        let count = await student.deleteStudent(id);
+        console.log(count + ' record(0) deleted');
+        res.setHeader('Content-Type', 'application/json');
+        res.send(`<h1>${count} record(s) deleted</h1>`);
+    })
     .listen(3500, () => {
         console.log('server is running on port 3500');
     })

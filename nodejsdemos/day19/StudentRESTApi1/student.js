@@ -62,7 +62,7 @@ module.exports.updateStudent = async (student) => {
             $set: {
                 name: student.name,
                 age: student.age,
-                price: student.marks,
+                marks: student.marks,
             }
         }
         const result = await students.updateOne(filter, updateDocument);
