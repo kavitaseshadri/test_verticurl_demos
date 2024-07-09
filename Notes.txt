@@ -1,3 +1,31 @@
+8/July/2024-Monday
+..................
+
+MongoDB-functional Layer for student.js 
+
+db.students.deleteMany({});
+
+
+async/await, Promise 
+MVC with MongoDB Driver 
+Student RESTAPI Layer with MongoDB-functional Layer 
+StudentMVC-RESTAPI-Model Layer 
+StudentSPA-RESTAPI-Model Layer 
+StudentDOMClient-RESTAPI-Model Layer 
+
+MVC 
+RESTful
+
+day19-
+npm install express --save
+npm install body-parser --save
+npm install serve-static --save
+npm install cookie-parser --save
+npm install cookie-session --save
+npm install mongoose --save
+npm install mongodb --save
+
+
 4/July/2024-Thursday
 .....................
 

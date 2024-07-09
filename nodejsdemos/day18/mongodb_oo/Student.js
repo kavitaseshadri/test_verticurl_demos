@@ -13,6 +13,8 @@ class Student {
     save() {
         //it will perform both insert and update
         const db = getDB();
+        // console.log('db name');
+        // console.log(db);
         let dbOp;
         if (this._id) {
             //update the product
