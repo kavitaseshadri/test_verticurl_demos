@@ -1,3 +1,47 @@
+11/July/2024-Thursday
+.....................
+
+day22
+
+RESTAPI layer-view was not really necessary-any SPA client could have used this 
+
+View-HTML Template( will be useful later with ReactJS), EJS, PUG, Handlebars 
+StudentMVC 
+Hidden Form Field, URL Rewriting, Session Attributes, Cookie 
+
+npm install --save pug ejs express-handlebars 
+
+npm install express body-parser serve-static cookie-parser cookie-session mongodb mongoose --save
+
+e-comm: Node+Express, Microservices Application-M (mongodb, mongoose, file), View (Pug,EJS,Handlebars),Contoller-router
+Middleware-Cookie, Sessions, JWT, Authentication, Authorization, Validation, Error handling
+WebSockets, JSTesting, Docker&Kubernetes, GraphQL, TypeScript, Security, Peformance, ReactJS, NextJS 
+
+nodemon you don't need to start and stop the server 
+it doesn't show errors in a verbose mode for debugging 
+
+package: jsonserver it can work like a document db for you
+
+What forms/HTML pages do we need for our Student Scenario?
+1) display all student records-Edit/Update, Delete 
+2) add Student Form/html page will be empty form 
+3) update Student-will be a Form/html page that would be pre-populated
+4) login
+5) logout
+
+MVC
+
+Model
+View
+Controller-
+Will check send a view page/or some sort of form to accept  data
+then it will read the form
+then it will call the appropriate Model for backend operation
+then it will call another view component to compose a response page
+send this response page back to the user
+
+
+
 10/July/2024-Wednesday
 ......................
 
