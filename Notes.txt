@@ -1,3 +1,29 @@
+10/July/2024-Wednesday
+......................
+
+day21 folder
+
+move StudentRESTApi3 to day21 
+
+run npm init in day21 folder 
+
+npm install express body-parser serve-static cookie-parser cookie-session mongodb mongoose --save
+
+Mongoose-
+
+starts with a Schema definition
+Then we create a Model from the Schema
+Then we use the Model to create objects that need to be perisited
+we don't need to define any methods for basic CRUD and search operation
+
+MongoDB will allow you to store miscellaneus objects in your collection
+Mongoose will only allow homogenous object 
+
+Using MongoDB driver will allow you to store any and all kinds of objects in the same collection
+
+
+
+
 9/July/2024-Tuesday
 ...................
 
@@ -33,6 +59,7 @@ npm install cookie-session --save
 npm install mongodb --save
 npm install mongoose --save
 
+npm install express body-parser serve-static cookie-parser cookie-session mongodb mongoose --save
 
 4/July/2024-Thursday
 .....................
