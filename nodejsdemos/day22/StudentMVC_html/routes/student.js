@@ -4,7 +4,6 @@ const studentController = require('../controller/student1');
 const { addStudentView } = require('../view/addStudentView');
 //we are destructuring a function from file
 
-
 router
     .get('/', (req, res, next) => {
         res.sendFile('__dirname__', '/public/index.html');
@@ -19,7 +18,7 @@ router
         console.log('addStudent called');
         console.log(req.method);
         //res.send(`<h1>Hello There!!</h1>`)
-        // console.log(addStudentView());
+        console.log(addStudentView());
         res.send(addStudentView())
         // res.send(`<html>
         //     <form method="post" class="flex_v">
