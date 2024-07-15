@@ -1,3 +1,75 @@
+13/July/2024-Monday
+....................
+
+MERN:
+ReactJS-SPA Single Page Application
+NextJS-Multipage SPA 
+TypeScript
+JSTesting
+GraphQL-RESTful 
+Microservices, Docker, Kubernetes
+Electron
+Web Sockets
+Performace
+Security
+Authentication, Authorization,Error Handling, Validation 
+
+ReactJS-
+UI
+Event Handling 
+State Management
+Component Architecture
+Project Folder structure of React Application 
+node platform 
+
+npx create-react-app
+yarn 
+
+require - CommonJS
+
+import ES6 import system 
+
+Install yarn 
+create a project structure using yarn 
+vite 
+
+NextJS-yarn
+
+yarn is a tool that will help you to create a react project
+but first you need to install yarn itself 
+
+npm install --global yarn
+
+yarn --version 
+
+npm install --global npx 
+
+yarn create react-app reactdemo0
+cd reactdemo0
+yarn start
+
+
+12/July/2024-Friday
+...................
+
+ecomm-filebased-it only uses router,also file based storage, HTML Templates
+ecomm-mongoose-it uses both a router and a controller-mongodb through mongoose, EJS
+
+mvc_split1-only routes 
+mvc_split2-both routes and controllers
+
+Contollers, Routes, index.js, Model files 
+
+Authentication
+Validation
+JWT
+Sessions
+Cookies 
+
+
+
+
+
 11/July/2024-Thursday
 .....................
 
