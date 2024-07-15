@@ -48,6 +48,60 @@ yarn create react-app reactdemo0
 cd reactdemo0
 yarn start
 
+Project Structure 
+
+We don't do any DOM manipulation 
+
+public/index.html keep it, delete some of the rubbish in it
+src>App.css, App.js,index.css clear it out
+index.js keep it as is
+
+rafce-generates boiler plate code for react functional components
+ES7 React snippets extension(ES7+ React/Redux/React-Native snippets )
+
+Functional components-all the current projects use this
+Class components-when reactjs was first introduced we only had class components
+SPA-Single Page Application 
+
+typically we don't change anything in index.html
+div with id root, this is where our component tree will be inserted!
+so don't delete this
+
+index.js-we will add/change only one thing
+Similary, App.js, we will typically change only one thing
+
+We are going to be creating tons of Custom Functional components
+The client (browser) receives only one reponse in the form of a single html file that is sent only once by the application, unless I referesh my browser
+index.html
+
+App.js 
+App.css 
+
+index.js
+index.css 
+
+One component per file 
+component.js
+component.css 
+
+react takes care of DOM manipulation, you're are not allowed  to do DOM manipulation
+we will never ever use the document object
+
+Hooks-a hook is nothing but a function given to us by React for a specific purpose 
+In the  component file, what we are writing is not html,
+it is a pseudo html called JSX created by the ReactJS Template
+JavaScript and XML 
+
+How to mix programming syntaxes with HTML 
+EJS <%= %>
+
+Library, it is not a framework- so it doesn't impose any strict folder convention
+
+In react, every file is its own module
+so, if you want a component to be visible outside the file, export it, and the other that wants to use the component should import it!
+
+
+
 
 12/July/2024-Friday
 ...................
