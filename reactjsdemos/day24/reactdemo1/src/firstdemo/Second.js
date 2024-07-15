@@ -1,5 +1,6 @@
 import React from 'react'
 import './Second.css'
+import First from './First';
 
 const Second = () => {
 
@@ -14,6 +15,7 @@ const Second = () => {
         <div>
             <h1>{text}</h1>
             <button onClick={handleClickFunction}>Button1</button>
+            <First />
         </div>
     )
 }
