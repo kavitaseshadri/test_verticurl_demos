@@ -27,17 +27,17 @@ const List = () => {
         let updatedArray = [...listItem];//this is a new array with all existing items
         updatedArray = [...listItem, text];//this is the new array, with all existing items and a new item
         setListItem(updatedArray);
-
-        const myList = listItem.map((item, index) => <li key={index}>{item}</li>)
-
-        return (
-            <div>
-                <h1>List Demo1</h1>
-                <input value={text} onChange={textFieldHandler}></input>
-                <button onClick={addItemHandler}>Add Item</button>
-                <ul>{myList}</ul>
-            </div>
-        )
     }
+    const myList = listItem.map((item, index) => <li key={index}>{item}</li>)
 
-    export default List
+    return (
+        <div>
+            <h1>List Demo1</h1>
+            <input value={text} onChange={textFieldHandler}></input>
+            <button onClick={addItemHandler}>Add Item</button>
+            <ul>{myList}</ul>
+        </div>
+    )
+}
+
+export default List;
