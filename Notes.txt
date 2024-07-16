@@ -43,6 +43,8 @@ also a drop down with 4 options-addition, subtraction,multiplication,division
 a button with caption Submit 
 now depending on what option has been choosen show the calculation of the result in a new text field
 
+Array-Scenarios
+CRUD
 
 
 15/July/2024-Monday
