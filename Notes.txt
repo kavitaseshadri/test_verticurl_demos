@@ -1,4 +1,51 @@
-13/July/2024-Monday
+16/July/2024-Tuesday
+....................
+
+ReactJS
+more examples-
+
+You cannot use any of the traditional DOM logic 
+hacks 
+Component Architecture
+Parent/Child relationship 
+Nesting between tags-
+props drilling
+lifting up the State
+Hooks-
+useState()
+State Management-is done in a twisted way using useState()
+Because I don't have access to the html elements directly,
+
+useState-it's a hook, a hook is basically a JavaScript Function
+
+State management for components is one of them.
+
+destructuring of arrays?
+
+const fruits=['mango','banana','apple','watermelon','orange'];
+const [fruit1,,,fruit4,]=fruits;
+
+let msg="hello";
+
+useState();
+it actually returning an array of two elements
+first item it returns is a variable (state management variable)
+second item it returns is a function to edit that variable
+we can assign initial value to useState()
+
+
+reactjs uses it's own Virtual DOM tree that it links to the original undelying DOM tree.
+
+Problem Statement-
+
+Create a UI with 2 inputs fields to accept 2 numbers 
+also a drop down with 4 options-addition, subtraction,multiplication,division
+a button with caption Submit 
+now depending on what option has been choosen show the calculation of the result in a new text field
+
+
+
+15/July/2024-Monday
 ....................
 
 MERN:
