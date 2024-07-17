@@ -1,5 +1,4 @@
 import React from 'react'
-import ProfileList from './ProfileList'
 
 const ProfileCard8 = (props) => {
     const { title, handle, image, offer } = props.data;
