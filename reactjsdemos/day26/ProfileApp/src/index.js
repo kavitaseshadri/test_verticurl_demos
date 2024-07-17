@@ -16,8 +16,8 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <ProfileApp1 /> */}
-    <ProfileApp2 />
-    {/* <ProfileApp3 /> */}
+    {/* <ProfileApp2 /> */}
+    <ProfileApp3 />
     {/* <ProfileApp4 /> */}
     {/* <ProfileApp5 /> */}
     {/* <ProfileApp6 /> */}

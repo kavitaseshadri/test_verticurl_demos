@@ -23,7 +23,7 @@ so that it's UI or behaviour can be customized
 
 You can't write conditions or loop in JSX
 Conditional Operator is the only thing that is allowed in JSX
-
+offer && 
 
 
 16/July/2024-Tuesday
