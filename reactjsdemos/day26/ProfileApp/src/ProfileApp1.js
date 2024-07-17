@@ -1,8 +1,13 @@
 import React from 'react'
+import ProfileCard1 from './components/ProfileCard1'
 
 const ProfileApp1 = () => {
     return (
-        <div>ProfileApp1</div>
+        <div>
+            <ProfileCard1></ProfileCard1>
+            <ProfileCard1 />
+            <ProfileCard1></ProfileCard1>
+        </div>
     )
 }
 

@@ -2,15 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import ProfileApp1 from './ProfileApp1';
+import ProfileApp2 from './ProfileApp2';
+import ProfileApp3 from './ProfileApp3';
+import ProfileApp4 from './ProfileApp4';
+import ProfileApp5 from './ProfileApp5';
+import ProfileApp6 from './ProfileApp6';
+import ProfileApp7 from './ProfileApp7';
+import ProfileApp8 from './ProfileApp8';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <ProfileApp1 /> */}
+    <ProfileApp2 />
+    {/* <ProfileApp3 /> */}
+    {/* <ProfileApp4 /> */}
+    {/* <ProfileApp5 /> */}
+    {/* <ProfileApp6 /> */}
+    {/* <ProfileApp7 /> */}
+    {/* <ProfileApp8 /> */}
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

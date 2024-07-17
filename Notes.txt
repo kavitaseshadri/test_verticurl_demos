@@ -1,6 +1,10 @@
 17/July/2024-Wednesday
 ......................
 
+When you download my ReactJS or NextJS project, make sure to run npm install
+only then, node_modules will be created
+
+
 ProfileApp
 AnimalApp
 ArrayApp
@@ -11,6 +15,14 @@ Custom Component-how to pass values to it to customize it
 Parent-Child props passing 
 props drilling 
 lifting up the state 
+conditional rendering 
+
+How will ProfileApp which is the parent, 
+pass data to ProfileCard which in this context is the child,
+so that it's UI or behaviour can be customized
+
+You can't write conditions or loop in JSX
+Conditional Operator is the only thing that is allowed in JSX
 
 
 
