@@ -15,14 +15,22 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    {/* <ProfileApp1 /> */}
-    {/* <ProfileApp2 /> */}
+    <h1>Profile App1</h1>
+    <ProfileApp1 />
+    <h1>Profile App2</h1>
+    <ProfileApp2 />
+    <h1>Profile App3</h1>
     <ProfileApp3 />
-    {/* <ProfileApp4 /> */}
-    {/* <ProfileApp5 /> */}
-    {/* <ProfileApp6 /> */}
-    {/* <ProfileApp7 /> */}
-    {/* <ProfileApp8 /> */}
+    <h1>Profile App4</h1>
+    <ProfileApp4 />
+    <h1>Profile App5</h1>
+    <ProfileApp5 />
+    <h1>Profile App6</h1>
+    <ProfileApp6 />
+    <h1>Profile App7</h1>
+    <ProfileApp7 />
+    <h1>Profile App8</h1>
+    <ProfileApp8 />
   </React.StrictMode>
 );
 

@@ -25,6 +25,12 @@ You can't write conditions or loop in JSX
 Conditional Operator is the only thing that is allowed in JSX
 offer && 
 
+useContext()-
+useEffect()-
+useReducer()-
+
+data resides in ProfileApp8>ProfileList->ProfileCard8
+props drilling 
 
 16/July/2024-Tuesday
 ....................
