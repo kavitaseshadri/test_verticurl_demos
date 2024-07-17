@@ -1,3 +1,19 @@
+17/July/2024-Wednesday
+......................
+
+ProfileApp
+AnimalApp
+ArrayApp
+BookApp-Standalone, JSONServer, Proper Backend 
+ExpenseApp
+
+Custom Component-how to pass values to it to customize it
+Parent-Child props passing 
+props drilling 
+lifting up the state 
+
+
+
 16/July/2024-Tuesday
 ....................
 
