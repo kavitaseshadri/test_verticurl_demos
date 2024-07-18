@@ -35,9 +35,9 @@ const BookApp = () => {
             if (book.id === id) {
                 return { ...book, title: newTitle }
             }
-            setBooks(updatedBooks);
-            console.log(books);
         })
+        setBooks(updatedBooks);
+        console.log(books);
     }
     return (
         <div>
