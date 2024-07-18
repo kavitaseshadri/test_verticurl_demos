@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
-const BookCreate = () => {
-
+const BookCreate = ({ onCreate }) => {
+    // let createHandler = props.onCreate;
+    //life is too short
+    //how many state variables would be required?
     const [title, setTitle] = useState('');
     const handleChange = (event) => {
         setTitle(event.target.value);
@@ -19,8 +21,8 @@ const BookCreate = () => {
             <h3>Add a Book</h3>
             <form onSubmit={handleSubmit}>
                 <label>Title</label>
-                <input value={title} onChange={handleChange} />
-                <button type="submit">Create a Book</button>
+                <input value={title} onChange={handleChange}></input>
+                <button type="submit">Create Book</button>
             </form>
         </div>
     )

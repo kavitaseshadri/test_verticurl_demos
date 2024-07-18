@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BookShow from './BookShow'
 
 const BookList = ({ books, onDelete, onEdit }) => {
@@ -7,13 +7,15 @@ const BookList = ({ books, onDelete, onEdit }) => {
             <BookShow
                 onEdit={onEdit}
                 onDelete={onDelete}
-                key={book.id}
-                book={book}
-            />
+                key={books.id}
+                book={book} />
         )
     })
+
     return (
-        <div>{renderedBooks}</div>
+        <div>
+            {renderedBooks}
+        </div>
     )
 }
 
