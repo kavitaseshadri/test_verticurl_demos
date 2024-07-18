@@ -8,6 +8,11 @@ BookApp1-CRUD done using arrays
 BookApp-useContext()
 BookApp-CRUD-JSONServer as our backend-useEffect()
 
+Create a Book
+Edit a Book
+Delete a Book
+Fetch all Books 
+
 
 17/July/2024-Wednesday
 ......................
