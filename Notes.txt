@@ -13,6 +13,7 @@ Edit a Book
 Delete a Book
 Fetch all Books 
 
+bookapp-context, expense-app: npm install, npm start
 
 17/July/2024-Wednesday
 ......................
