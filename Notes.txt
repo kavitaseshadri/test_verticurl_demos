@@ -1,3 +1,14 @@
+18/July/2024-Thursday
+.....................
+
+props drilling-Parent tries to pass its' data to the child
+lifting up the state-the parent tries to access a property that is defined in the Child
+
+BookApp1-CRUD done using arrays 
+BookApp-useContext()
+BookApp-CRUD-JSONServer as our backend-useEffect()
+
+
 17/July/2024-Wednesday
 ......................
 
@@ -13,8 +24,6 @@ ExpenseApp
 
 Custom Component-how to pass values to it to customize it
 Parent-Child props passing 
-props drilling 
-lifting up the state 
 conditional rendering 
 
 How will ProfileApp which is the parent, 
